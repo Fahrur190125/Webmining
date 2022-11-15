@@ -1,0 +1,882 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Topik Modelling Dengan Latent Semantic Indexing (LSI) atau Latent Semantic Analysis (LSA) menggunakan Scikit-Learn &#8212; Fahrur Rizal 190411100125</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Ensemble Learning (Bagging, Stacking, dan Random Forest Classification) dan Grid Search" href="notebooks5.html" />
+    <link rel="prev" title="UTS WEB Mining" href="notebooks3.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.jpeg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Fahrur Rizal 190411100125</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Selamat Datang di Website Dinamis Fahrur Rizal 190411100125
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks.html">
+   Crawling Website
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks1.html">
+   Klasifikasi &amp; Clustering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks2.html">
+   Ekstraksi Ringkasan Dokumen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks3.html">
+   UTS WEB Mining
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Topik Modelling Dengan Latent Semantic Indexing (LSI) atau Latent Semantic Analysis (LSA) menggunakan Scikit-Learn
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks5.html">
+   Ensemble Learning (Bagging, Stacking, dan Random Forest Classification) dan Grid Search
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown-notebooks.html">
+   About Me
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/Fahrur190125/Webmining/master?urlpath=tree/docs/notebooks4.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/drive/15BhxnNNR5UEEa_g1bnLp4uzC4F3kF8yh?usp=sharing/github/Fahrur190125/Webmining/blob/master/docs/notebooks4.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/Fahrur190125/Webmining"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/Fahrur190125/Webmining/issues/new?title=Issue%20on%20page%20%2Fnotebooks4.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/notebooks4.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#topik-modelling">
+   <strong>
+    Topik Modelling
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#latent-semantic-indexing-lsi-atau-latent-semantic-analysis-lsa">
+   <strong>
+    Latent Semantic Indexing (LSI) atau Latent Semantic Analysis (LSA)
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mengambil-dokumen">
+   <strong>
+    Mengambil Dokumen
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#meload-dokumen">
+   <strong>
+    Meload Dokumen
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membuat-fitur-tf-idf">
+   <strong>
+    Membuat Fitur TF-IDF
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membuat-matrik-svd">
+   <strong>
+    Membuat Matrik SVD
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ekstrak-topik-dan-istilah">
+   <strong>
+    Ekstrak topik dan istilah
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kesimpulan">
+   <strong>
+    Kesimpulan
+   </strong>
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Topik Modelling Dengan Latent Semantic Indexing (LSI) atau Latent Semantic Analysis (LSA) menggunakan Scikit-Learn</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#topik-modelling">
+   <strong>
+    Topik Modelling
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#latent-semantic-indexing-lsi-atau-latent-semantic-analysis-lsa">
+   <strong>
+    Latent Semantic Indexing (LSI) atau Latent Semantic Analysis (LSA)
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mengambil-dokumen">
+   <strong>
+    Mengambil Dokumen
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#meload-dokumen">
+   <strong>
+    Meload Dokumen
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membuat-fitur-tf-idf">
+   <strong>
+    Membuat Fitur TF-IDF
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membuat-matrik-svd">
+   <strong>
+    Membuat Matrik SVD
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ekstrak-topik-dan-istilah">
+   <strong>
+    Ekstrak topik dan istilah
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kesimpulan">
+   <strong>
+    Kesimpulan
+   </strong>
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="topik-modelling-dengan-latent-semantic-indexing-lsi-atau-latent-semantic-analysis-lsa-menggunakan-scikit-learn">
+<h1>Topik Modelling Dengan Latent Semantic Indexing (LSI) atau Latent Semantic Analysis (LSA) menggunakan Scikit-Learn<a class="headerlink" href="#topik-modelling-dengan-latent-semantic-indexing-lsi-atau-latent-semantic-analysis-lsa-menggunakan-scikit-learn" title="Permalink to this headline">#</a></h1>
+<p>Dalam pembahasan kali ini, kita akan fokus pada Latent Semantic Indexing (LSI) atau Latent Semantic Analysis (LSA) dan melakukan topik modelling menggunakan Scikit-learn.</p>
+<section id="topik-modelling">
+<h2><strong>Topik Modelling</strong><a class="headerlink" href="#topik-modelling" title="Permalink to this headline">#</a></h2>
+<p>Topik Modelling ialah teknik tanpa pengawasan untuk menemukan tema dokumen yang diberikan. Ini mengekstrak kumpulan kata kunci yang terjadi bersama. Kata kunci yang muncul bersama ini mewakili sebuah topik. Misalnya, saham, pasar, ekuitas, reksa dana akan mewakili topik ‘investasi saham’.</p>
+</section>
+<section id="latent-semantic-indexing-lsi-atau-latent-semantic-analysis-lsa">
+<h2><strong>Latent Semantic Indexing (LSI) atau Latent Semantic Analysis (LSA)</strong><a class="headerlink" href="#latent-semantic-indexing-lsi-atau-latent-semantic-analysis-lsa" title="Permalink to this headline">#</a></h2>
+<p>Latent Semantic Indexing (LSI) atau Latent Semantic Analysis (LSA)  adalah teknik dalam natural language processing , khususnya  distributional semantics , yang menganalisis hubungan antara satu set dokumen dan istilah yang dikandungnya dengan menghasilkan satu set konsep yang terkait dengan dokumen dan istilah. LSA mengasumsikan bahwa kata-kata yang memiliki makna yang dekat akan muncul dalam potongan teks yang serupa (  distributional hypothesis ). Sebuah matriks yang berisi jumlah kata per dokumen (baris mewakili kata-kata unik dan kolom mewakili setiap dokumen) dibangun dari sepotong besar teks dan teknik matematika yang disebut Singular Value Decomposition (SVD) digunakan untuk mengurangi jumlah baris dengan tetap menjaga kesamaan struktur antar kolom. Dokumen kemudian dibandingkan dengan mengambil kosinus sudut antara dua vektor (atau produk titik antara normalisasi dua vektor) yang dibentuk oleh dua kolom. Nilai yang mendekati 1 menunjukkan dokumen yang sangat mirip sedangkan nilai yang mendekati 0 menunjukkan dokumen yang sangat berbeda.<br></p>
+<center><img src='https://media.geeksforgeeks.org/wp-content/uploads/20210406165951/Screenshot20210406165933.png'></center><center>Gambar LSA</center> Untuk melakukan LSA dapat dilakukan dengan mengikuti tahapan tahapan berikut.</section>
+<section id="mengambil-dokumen">
+<h2><strong>Mengambil Dokumen</strong><a class="headerlink" href="#mengambil-dokumen" title="Permalink to this headline">#</a></h2>
+<p>Langkah awal untuk melakukan Topik Modelling ialah dengan mengambil dokumen tersebut dengan mengcrawling data dokumen dengan menggunakan scrapy &amp; crochet seperti berikut.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install scrapy
+<span class="o">!</span>pip install crochet
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: scrapy in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (2.6.1)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[notice] A new release of pip available: 22.2.2 -&gt; 22.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pyOpenSSL&gt;=16.2.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (22.0.0)
+Requirement already satisfied: itemadapter&gt;=0.1.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (0.6.0)
+Requirement already satisfied: parsel&gt;=1.5.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (1.6.0)
+Requirement already satisfied: queuelib&gt;=1.4.2 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (1.6.2)
+Requirement already satisfied: service-identity&gt;=16.0.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (21.1.0)
+Requirement already satisfied: zope.interface&gt;=4.1.3 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (5.4.0)
+Requirement already satisfied: cssselect&gt;=0.9.1 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (1.1.0)
+Requirement already satisfied: tldextract in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (3.3.0)
+Requirement already satisfied: cryptography&gt;=2.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (37.0.2)
+Requirement already satisfied: w3lib&gt;=1.17.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (1.22.0)
+Requirement already satisfied: protego&gt;=0.1.15 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (0.2.1)
+Requirement already satisfied: lxml&gt;=3.5.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (4.9.1)
+Requirement already satisfied: Twisted&gt;=17.9.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (22.4.0)
+Requirement already satisfied: PyDispatcher&gt;=2.0.5 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (2.0.5)
+Requirement already satisfied: setuptools in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (57.4.0)
+Requirement already satisfied: itemloaders&gt;=1.0.1 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (1.0.4)
+Requirement already satisfied: cffi&gt;=1.12 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from cryptography&gt;=2.0-&gt;scrapy) (1.15.0)
+Requirement already satisfied: jmespath&gt;=0.9.5 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from itemloaders&gt;=1.0.1-&gt;scrapy) (1.0.1)
+Requirement already satisfied: six&gt;=1.6.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from parsel&gt;=1.5.0-&gt;scrapy) (1.16.0)
+Requirement already satisfied: attrs&gt;=19.1.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from service-identity&gt;=16.0.0-&gt;scrapy) (21.4.0)
+Requirement already satisfied: pyasn1 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from service-identity&gt;=16.0.0-&gt;scrapy) (0.4.8)
+Requirement already satisfied: pyasn1-modules in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from service-identity&gt;=16.0.0-&gt;scrapy) (0.2.8)
+Requirement already satisfied: Automat&gt;=0.8.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Twisted&gt;=17.9.0-&gt;scrapy) (20.2.0)
+Requirement already satisfied: twisted-iocpsupport&lt;2,&gt;=1.0.2 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Twisted&gt;=17.9.0-&gt;scrapy) (1.0.2)
+Requirement already satisfied: typing-extensions&gt;=3.6.5 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Twisted&gt;=17.9.0-&gt;scrapy) (4.0.1)
+Requirement already satisfied: incremental&gt;=21.3.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Twisted&gt;=17.9.0-&gt;scrapy) (21.3.0)
+Requirement already satisfied: constantly&gt;=15.1 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Twisted&gt;=17.9.0-&gt;scrapy) (15.1.0)
+Requirement already satisfied: hyperlink&gt;=17.1.1 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Twisted&gt;=17.9.0-&gt;scrapy) (21.0.0)
+Requirement already satisfied: idna in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from tldextract-&gt;scrapy) (3.3)
+Requirement already satisfied: requests&gt;=2.1.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from tldextract-&gt;scrapy) (2.26.0)
+Requirement already satisfied: requests-file&gt;=1.4 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from tldextract-&gt;scrapy) (1.5.1)
+Requirement already satisfied: filelock&gt;=3.0.8 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from tldextract-&gt;scrapy) (3.7.1)
+Requirement already satisfied: pycparser in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from cffi&gt;=1.12-&gt;cryptography&gt;=2.0-&gt;scrapy) (2.21)
+Requirement already satisfied: charset-normalizer~=2.0.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from requests&gt;=2.1.0-&gt;tldextract-&gt;scrapy) (2.0.9)
+Requirement already satisfied: certifi&gt;=2017.4.17 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from requests&gt;=2.1.0-&gt;tldextract-&gt;scrapy) (2021.10.8)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from requests&gt;=2.1.0-&gt;tldextract-&gt;scrapy) (1.26.7)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: crochet in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (2.0.0)
+Requirement already satisfied: wrapt in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from crochet) (1.14.1)
+Requirement already satisfied: Twisted&gt;=16.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from crochet) (22.4.0)
+Requirement already satisfied: Automat&gt;=0.8.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Twisted&gt;=16.0-&gt;crochet) (20.2.0)
+Requirement already satisfied: incremental&gt;=21.3.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Twisted&gt;=16.0-&gt;crochet) (21.3.0)
+Requirement already satisfied: zope.interface&gt;=4.4.2 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Twisted&gt;=16.0-&gt;crochet) (5.4.0)
+Requirement already satisfied: hyperlink&gt;=17.1.1 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Twisted&gt;=16.0-&gt;crochet) (21.0.0)
+Requirement already satisfied: typing-extensions&gt;=3.6.5 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Twisted&gt;=16.0-&gt;crochet) (4.0.1)
+Requirement already satisfied: constantly&gt;=15.1 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Twisted&gt;=16.0-&gt;crochet) (15.1.0)
+Requirement already satisfied: attrs&gt;=19.2.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Twisted&gt;=16.0-&gt;crochet) (21.4.0)
+Requirement already satisfied: twisted-iocpsupport&lt;2,&gt;=1.0.2 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Twisted&gt;=16.0-&gt;crochet) (1.0.2)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[notice] A new release of pip available: 22.2.2 -&gt; 22.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: six in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Automat&gt;=0.8.0-&gt;Twisted&gt;=16.0-&gt;crochet) (1.16.0)
+Requirement already satisfied: idna&gt;=2.5 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from hyperlink&gt;=17.1.1-&gt;Twisted&gt;=16.0-&gt;crochet) (3.3)
+Requirement already satisfied: setuptools in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from zope.interface&gt;=4.4.2-&gt;Twisted&gt;=16.0-&gt;crochet) (57.4.0)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scrapy</span>
+<span class="kn">from</span> <span class="nn">scrapy.crawler</span> <span class="kn">import</span> <span class="n">CrawlerRunner</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">crochet</span> <span class="kn">import</span> <span class="n">setup</span><span class="p">,</span> <span class="n">wait_for</span>
+<span class="n">setup</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">QuotesToCsv</span><span class="p">(</span><span class="n">scrapy</span><span class="o">.</span><span class="n">Spider</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;MJKQuotesToCsv&quot;</span>
+    <span class="n">start_urls</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s1">&#39;https://tekno.tempo.co/read/1580340/peran-penting-iptekin-terhadap-kemajuan-sebuah-bangsa&#39;</span>
+    <span class="p">]</span>
+    <span class="n">custom_settings</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;ITEM_PIPELINES&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;__main__.ExtractFirstLine&#39;</span><span class="p">:</span> <span class="mi">1</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;FEEDS&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;news.csv&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;csv&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;overwrite&#39;</span><span class="p">:</span> <span class="kc">True</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;parse data from urls&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">quote</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s1">&#39;#isi &gt; p&#39;</span><span class="p">):</span>
+            <span class="k">yield</span> <span class="p">{</span><span class="s1">&#39;news&#39;</span><span class="p">:</span> <span class="n">quote</span><span class="o">.</span><span class="n">extract</span><span class="p">()}</span>
+
+
+<span class="k">class</span> <span class="nc">ExtractFirstLine</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">process_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span> <span class="n">spider</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;text processing&quot;&quot;&quot;</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">item</span><span class="p">)[</span><span class="s2">&quot;news&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+        <span class="n">first_line</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__remove_html_tags__</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;news&#39;</span><span class="p">:</span> <span class="n">first_line</span><span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__remove_html_tags__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;remove html tags from string&quot;&quot;&quot;</span>
+        <span class="n">html_tags</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;&lt;.*?&gt;&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">html_tags</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+<span class="nd">@wait_for</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">run_spider</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;run spider with MJKQuotesToCsv&quot;&quot;&quot;</span>
+    <span class="n">crawler</span> <span class="o">=</span> <span class="n">CrawlerRunner</span><span class="p">()</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">crawler</span><span class="o">.</span><span class="n">crawl</span><span class="p">(</span><span class="n">QuotesToCsv</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">d</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">run_spider</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="meload-dokumen">
+<h2><strong>Meload Dokumen</strong><a class="headerlink" href="#meload-dokumen" title="Permalink to this headline">#</a></h2>
+<p>Setelah tahapan mengambil dokumen selesai, selanjutnya meload dokumen yang sudah didapatkan. Untuk dapat meload dokumen kita gunakan library os dan pandas seperti berikut.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Load Dataset</span>
+<span class="n">documents_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;news.csv&quot;</span><span class="p">)</span> <span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fin</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">fin</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">documents_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="membuat-fitur-tf-idf">
+<h2><strong>Membuat Fitur TF-IDF</strong><a class="headerlink" href="#membuat-fitur-tf-idf" title="Permalink to this headline">#</a></h2>
+<p>Setelah berhasil meload dokumen langkah selanjutnya ialah mengenerate fitur TF-IDF pada dokumen. Pada proses ini juga dilakukan operasi prepocessing, yaitu case folding, stopword, dan tokenizing. Untuk melakukan proses ini dengan menggunakan RegexpTokenizer dari library nltk seperti source code berikut.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">RegexpTokenizer</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+
+<span class="c1"># Initialize regex tokenizer</span>
+<span class="n">tokenizer</span> <span class="o">=</span> <span class="n">RegexpTokenizer</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\w+&#39;</span><span class="p">)</span>
+
+<span class="c1"># Vectorize document using TF-IDF</span>
+<span class="n">tfidf</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">(</span><span class="n">lowercase</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                        <span class="n">stop_words</span><span class="o">=</span><span class="s1">&#39;english&#39;</span><span class="p">,</span>
+                        <span class="n">ngram_range</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
+                        <span class="n">tokenizer</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">tokenize</span><span class="p">)</span>
+
+<span class="c1"># Fit and Transform the documents</span>
+<span class="n">train_data</span> <span class="o">=</span> <span class="n">tfidf</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">documents_list</span><span class="p">)</span>  
+<span class="n">train_data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;12x237 sparse matrix of type &#39;&lt;class &#39;numpy.float64&#39;&gt;&#39;
+	with 414 stored elements in Compressed Sparse Row format&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="membuat-matrik-svd">
+<h2><strong>Membuat Matrik SVD</strong><a class="headerlink" href="#membuat-matrik-svd" title="Permalink to this headline">#</a></h2>
+<p>Matrik SVD adalah teknik dekomposisi matriks yang memfaktorkan matriks dalam produk matriks. Untuk dapat membuat matrik tersebut kita dapat menggunakan TruncatedSVD dari library sklearn seperti berikut.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">TruncatedSVD</span>
+<span class="c1"># Define the number of topics or components</span>
+<span class="n">num_components</span><span class="o">=</span><span class="mi">12</span>
+
+<span class="c1"># Create SVD object</span>
+<span class="n">lsa</span> <span class="o">=</span> <span class="n">TruncatedSVD</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="n">num_components</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Fit SVD model on data</span>
+<span class="n">lsa</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">train_data</span><span class="p">)</span>
+
+<span class="c1"># Get Singular values and Components </span>
+<span class="n">Sigma</span> <span class="o">=</span> <span class="n">lsa</span><span class="o">.</span><span class="n">singular_values_</span>  
+<span class="n">V_transpose</span> <span class="o">=</span> <span class="n">lsa</span><span class="o">.</span><span class="n">components_</span><span class="o">.</span><span class="n">T</span>
+<span class="n">V_transpose</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 0.03032051, -0.01578158,  0.02957486, ...,  0.13452263,
+        -0.001634  ,  0.01389205],
+       [ 0.08266364,  0.2045497 , -0.05246138, ...,  0.03142077,
+        -0.02826952, -0.13820205],
+       [ 0.0211349 , -0.01933264,  0.00470397, ..., -0.03576667,
+        -0.00046002, -0.00403814],
+       ...,
+       [ 0.01586278, -0.0222079 ,  0.06057363, ..., -0.02526317,
+        -0.01147919, -0.01077322],
+       [ 0.22751616, -0.15445171,  0.00595529, ..., -0.04665262,
+        -0.00406978,  0.06940201],
+       [ 0.08347283,  0.12561986,  0.01204427, ..., -0.10436905,
+         0.00277031,  0.242551  ]])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="ekstrak-topik-dan-istilah">
+<h2><strong>Ekstrak topik dan istilah</strong><a class="headerlink" href="#ekstrak-topik-dan-istilah" title="Permalink to this headline">#</a></h2>
+<p>Setelah membuar matriks SVD, Selanjutnya kita perlu mengekstrak topik dari matriks komponen SVD dengan source code seperti berikut.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print the topics with their terms</span>
+<span class="n">terms</span> <span class="o">=</span> <span class="n">tfidf</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">component</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lsa</span><span class="o">.</span><span class="n">components_</span><span class="p">):</span>
+    <span class="n">zipped</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">terms</span><span class="p">,</span> <span class="n">component</span><span class="p">)</span>
+    <span class="n">top_terms_key</span><span class="o">=</span><span class="nb">sorted</span><span class="p">(</span><span class="n">zipped</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)[:</span><span class="mi">5</span><span class="p">]</span>
+    <span class="n">top_terms_list</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">top_terms_key</span><span class="p">)</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Topic &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;: &quot;</span><span class="p">,</span><span class="n">top_terms_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Topic 0:  [&#39;negara&#39;, &#39;dan&#39;, &#39;yang&#39;, &#39;di&#39;, &#39;dalam&#39;]
+Topic 1:  [&#39;adalah&#39;, &#39;elemen&#39;, &#39;ilmu&#39;, &#39;kunci&#39;, &#39;pengetahuan&#39;]
+Topic 2:  [&#39;kemudian&#39;, &#39;pendekatan&#39;, &#39;disebut&#39;, &#39;juga&#39;, &#39;berbagai&#39;]
+Topic 3:  [&#39;news&#39;, &#39;akibatnya&#39;, &#39;pendekatan&#39;, &#39;sistem&#39;, &#39;disebut&#39;]
+Topic 4:  [&#39;bahan&#39;, &#39;korea&#39;, &#39;sangat&#39;, &#39;selatan&#39;, &#39;taiwan&#39;]
+Topic 5:  [&#39;hal&#39;, &#39;baik&#39;, &#39;ini&#39;, &#39;cendekiawan&#39;, &#39;diskursus&#39;]
+Topic 6:  [&#39;seringkali&#39;, &#39;dan&#39;, &#39;cendekiawan&#39;, &#39;diskursus&#39;, &#39;ekosistem&#39;]
+Topic 7:  [&#39;dan&#39;, &#39;juga&#39;, &#39;antaranya&#39;, &#39;kelembagaan&#39;, &#39;mulai&#39;]
+Topic 8:  [&#39;dokumen&#39;, &#39;bahan&#39;, &#39;korea&#39;, &#39;sangat&#39;, &#39;selatan&#39;]
+Topic 9:  [&#39;ekonomi&#39;, &#39;bagian&#39;, &#39;begitu&#39;, &#39;berupaya&#39;, &#39;catch&#39;]
+Topic 10:  [&#39;halnya&#39;, &#39;indonesia&#39;, &#39;langsung&#39;, &#39;menerapkan&#39;, &#39;mengabsorbsi&#39;]
+Topic 11:  [&#39;â&#39;, &#39;amerika&#39;, &#39;austria&#39;, &#39;bagi&#39;, &#39;bahasa&#39;]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Lenovo\AppData\Local\Programs\Python\Python39\lib\site-packages\sklearn\utils\deprecation.py:87: builtins.FutureWarning: Function get_feature_names is deprecated; get_feature_names is deprecated in 1.0 and will be removed in 1.2. Please use get_feature_names_out instead.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="kesimpulan">
+<h2><strong>Kesimpulan</strong><a class="headerlink" href="#kesimpulan" title="Permalink to this headline">#</a></h2>
+<p>Hasil yang didapatkan dari topik modelling dengan Latent Semantic Indexing (LSI) atau Latent Semantic Analysis menggunakan library scikit-learn dengan mengambil 12 topik sebagai berikut.<br>
+Topic 1:  [‘negara’, ‘dan’, ‘yang’, ‘di’, ‘dalam’]<br>
+Topic 2:  [‘elemen’, ‘ilmu’, ‘kunci’, ‘pengetahuan’, ‘adalah’]<br>
+Topic 3:  [‘kemudian’, ‘juga’, ‘pendekatan’, ‘disebut’, ‘berbagai’]<br>
+Topic 4:  [‘news’, ‘akan’, ‘sistem’, ‘pendekatan’, ‘kemudian’]<br>
+Topic 5:  [‘bahan’, ‘korea’, ‘sangat’, ‘selatan’, ‘taiwan’]<br>
+Topic 6:  [‘hal’, ‘baik’, ‘ini’, ‘cendekiawan’, ‘diskursus’]<br>
+Topic 7:  [‘seringkali’, ‘banyak’, ‘sektor’, ‘cendekiawan’, ‘diskursus’]<br>
+Topic 8:  [‘dan’, ‘juga’, ‘nies’, ‘antaranya’, ‘kelembagaan’]<br>
+Topic 9:  [‘dokumen’, ‘bahan’, ‘korea’, ‘sangat’, ‘selatan’]<br>
+Topic 10:  [‘ekonomi’, ‘bagian’, ‘begitu’, ‘berupaya’, ‘catch’]<br>
+Topic 12:  [‘halnya’, ‘indonesia’, ‘langsung’, ‘menerapkan’, ‘mengabsorbsi’]<br>
+Topic 12:  [‘amerika’, ‘austria’, ‘bagi’, ‘bahasa’, ‘belanda’]</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="notebooks3.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">UTS WEB Mining</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="notebooks5.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Ensemble Learning (Bagging, Stacking, dan Random Forest Classification) dan Grid Search</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Fahrur Rizal<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
