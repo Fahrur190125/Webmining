@@ -1,0 +1,1454 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Ekstraksi Ringkasan Dokumen &#8212; Fahrur Rizal 190411100125</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="UTS WEB Mining" href="notebooks3.html" />
+    <link rel="prev" title="Klasifikasi &amp; Clustering" href="notebooks1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.jpeg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Fahrur Rizal 190411100125</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Selamat Datang di Website Dinamis Fahrur Rizal 190411100125
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks.html">
+   Crawling Website
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks1.html">
+   Klasifikasi &amp; Clustering
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Ekstraksi Ringkasan Dokumen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks3.html">
+   UTS WEB Mining
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks4.html">
+   Topik Modelling Dengan Latent Semantic Indexing (LSI) atau Latent Semantic Analysis (LSA) menggunakan Scikit-Learn
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks5.html">
+   Ensemble Learning (Bagging, Stacking, dan Random Forest Classification) dan Grid Search
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown-notebooks.html">
+   About Me
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/Fahrur190125/Webmining/master?urlpath=tree/docs/notebooks2.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/drive/15BhxnNNR5UEEa_g1bnLp4uzC4F3kF8yh?usp=sharing/github/Fahrur190125/Webmining/blob/master/docs/notebooks2.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/Fahrur190125/Webmining"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/Fahrur190125/Webmining/issues/new?title=Issue%20on%20page%20%2Fnotebooks2.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/notebooks2.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mengambil-dokumen">
+   <strong>
+    Mengambil Dokumen
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membaca-dokumen">
+   <strong>
+    Membaca Dokumen
+   </strong>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#convert-file-csv-ke-pdf">
+     Convert File CSV ke PDF
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#baca-dokumen">
+     Baca Dokumen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#memecah-dokumen">
+   <strong>
+    Memecah Dokumen
+   </strong>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#memecah-kalimat">
+     Memecah Kalimat
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#memecah-kata">
+     Memecah Kata
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membuat-matrik-tf-idf">
+   <strong>
+    Membuat Matrik TF-IDF
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membuat-graph">
+   <strong>
+    Membuat Graph
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#menghitung-pagerank">
+   <strong>
+    Menghitung PageRank
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#memilih-kalimat">
+   <strong>
+    Memilih Kalimat
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kesimpulan">
+   <strong>
+    Kesimpulan
+   </strong>
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Ekstraksi Ringkasan Dokumen</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mengambil-dokumen">
+   <strong>
+    Mengambil Dokumen
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membaca-dokumen">
+   <strong>
+    Membaca Dokumen
+   </strong>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#convert-file-csv-ke-pdf">
+     Convert File CSV ke PDF
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#baca-dokumen">
+     Baca Dokumen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#memecah-dokumen">
+   <strong>
+    Memecah Dokumen
+   </strong>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#memecah-kalimat">
+     Memecah Kalimat
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#memecah-kata">
+     Memecah Kata
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membuat-matrik-tf-idf">
+   <strong>
+    Membuat Matrik TF-IDF
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membuat-graph">
+   <strong>
+    Membuat Graph
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#menghitung-pagerank">
+   <strong>
+    Menghitung PageRank
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#memilih-kalimat">
+   <strong>
+    Memilih Kalimat
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kesimpulan">
+   <strong>
+    Kesimpulan
+   </strong>
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="ekstraksi-ringkasan-dokumen">
+<h1>Ekstraksi Ringkasan Dokumen<a class="headerlink" href="#ekstraksi-ringkasan-dokumen" title="Permalink to this headline">#</a></h1>
+<p>Sistem Peringkasan adalah sistem yang digunakan untuk menentukan topik yang sangat penting dari suatu dokumen. Proses peringkasan ini dapat dilakukan dengan melalui tahapan-tahapan berikut.</p>
+<section id="mengambil-dokumen">
+<h2><strong>Mengambil Dokumen</strong><a class="headerlink" href="#mengambil-dokumen" title="Permalink to this headline">#</a></h2>
+<p>Langkah awal untuk melakukan ekstraksi ringkasan dokumen ialah dengan mengambil dokumen tersebut dengan mengcrawling data dokumen dengan menggunakan scrapy &amp; crochet seperti berikut.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install scrapy
+<span class="o">!</span>pip install crochet
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: scrapy in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (2.6.1)
+Requirement already satisfied: itemadapter&gt;=0.1.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (0.6.0)
+Requirement already satisfied: w3lib&gt;=1.17.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (1.22.0)
+Requirement already satisfied: lxml&gt;=3.5.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (4.9.1)
+Requirement already satisfied: PyDispatcher&gt;=2.0.5 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (2.0.5)
+Requirement already satisfied: queuelib&gt;=1.4.2 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (1.6.2)
+Requirement already satisfied: parsel&gt;=1.5.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (1.6.0)
+Requirement already satisfied: setuptools in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (57.4.0)
+Requirement already satisfied: service-identity&gt;=16.0.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (21.1.0)
+Requirement already satisfied: itemloaders&gt;=1.0.1 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (1.0.4)
+Requirement already satisfied: pyOpenSSL&gt;=16.2.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (22.0.0)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[notice] A new release of pip available: 22.2.2 -&gt; 22.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: cssselect&gt;=0.9.1 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (1.1.0)
+Requirement already satisfied: tldextract in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (3.3.0)
+Requirement already satisfied: Twisted&gt;=17.9.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (22.4.0)
+Requirement already satisfied: zope.interface&gt;=4.1.3 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (5.4.0)
+Requirement already satisfied: cryptography&gt;=2.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (37.0.2)
+Requirement already satisfied: protego&gt;=0.1.15 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from scrapy) (0.2.1)
+Requirement already satisfied: cffi&gt;=1.12 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from cryptography&gt;=2.0-&gt;scrapy) (1.15.0)
+Requirement already satisfied: jmespath&gt;=0.9.5 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from itemloaders&gt;=1.0.1-&gt;scrapy) (1.0.1)
+Requirement already satisfied: six&gt;=1.6.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from parsel&gt;=1.5.0-&gt;scrapy) (1.16.0)
+Requirement already satisfied: pyasn1 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from service-identity&gt;=16.0.0-&gt;scrapy) (0.4.8)
+Requirement already satisfied: attrs&gt;=19.1.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from service-identity&gt;=16.0.0-&gt;scrapy) (21.4.0)
+Requirement already satisfied: pyasn1-modules in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from service-identity&gt;=16.0.0-&gt;scrapy) (0.2.8)
+Requirement already satisfied: Automat&gt;=0.8.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Twisted&gt;=17.9.0-&gt;scrapy) (20.2.0)
+Requirement already satisfied: hyperlink&gt;=17.1.1 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Twisted&gt;=17.9.0-&gt;scrapy) (21.0.0)
+Requirement already satisfied: twisted-iocpsupport&lt;2,&gt;=1.0.2 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Twisted&gt;=17.9.0-&gt;scrapy) (1.0.2)
+Requirement already satisfied: incremental&gt;=21.3.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Twisted&gt;=17.9.0-&gt;scrapy) (21.3.0)
+Requirement already satisfied: typing-extensions&gt;=3.6.5 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Twisted&gt;=17.9.0-&gt;scrapy) (4.0.1)
+Requirement already satisfied: constantly&gt;=15.1 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Twisted&gt;=17.9.0-&gt;scrapy) (15.1.0)
+Requirement already satisfied: idna in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from tldextract-&gt;scrapy) (3.3)
+Requirement already satisfied: filelock&gt;=3.0.8 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from tldextract-&gt;scrapy) (3.7.1)
+Requirement already satisfied: requests-file&gt;=1.4 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from tldextract-&gt;scrapy) (1.5.1)
+Requirement already satisfied: requests&gt;=2.1.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from tldextract-&gt;scrapy) (2.26.0)
+Requirement already satisfied: pycparser in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from cffi&gt;=1.12-&gt;cryptography&gt;=2.0-&gt;scrapy) (2.21)
+Requirement already satisfied: charset-normalizer~=2.0.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from requests&gt;=2.1.0-&gt;tldextract-&gt;scrapy) (2.0.9)
+Requirement already satisfied: certifi&gt;=2017.4.17 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from requests&gt;=2.1.0-&gt;tldextract-&gt;scrapy) (2021.10.8)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from requests&gt;=2.1.0-&gt;tldextract-&gt;scrapy) (1.26.7)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: crochet in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (2.0.0)
+Requirement already satisfied: wrapt in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from crochet) (1.14.1)
+Requirement already satisfied: Twisted&gt;=16.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from crochet) (22.4.0)
+Requirement already satisfied: hyperlink&gt;=17.1.1 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Twisted&gt;=16.0-&gt;crochet) (21.0.0)
+Requirement already satisfied: Automat&gt;=0.8.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Twisted&gt;=16.0-&gt;crochet) (20.2.0)
+Requirement already satisfied: typing-extensions&gt;=3.6.5 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Twisted&gt;=16.0-&gt;crochet) (4.0.1)
+Requirement already satisfied: attrs&gt;=19.2.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Twisted&gt;=16.0-&gt;crochet) (21.4.0)
+Requirement already satisfied: incremental&gt;=21.3.0 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Twisted&gt;=16.0-&gt;crochet) (21.3.0)
+Requirement already satisfied: constantly&gt;=15.1 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Twisted&gt;=16.0-&gt;crochet) (15.1.0)
+Requirement already satisfied: zope.interface&gt;=4.4.2 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Twisted&gt;=16.0-&gt;crochet) (5.4.0)
+Requirement already satisfied: twisted-iocpsupport&lt;2,&gt;=1.0.2 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Twisted&gt;=16.0-&gt;crochet) (1.0.2)
+Requirement already satisfied: six in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from Automat&gt;=0.8.0-&gt;Twisted&gt;=16.0-&gt;crochet) (1.16.0)
+Requirement already satisfied: idna&gt;=2.5 in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from hyperlink&gt;=17.1.1-&gt;Twisted&gt;=16.0-&gt;crochet) (3.3)
+Requirement already satisfied: setuptools in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (from zope.interface&gt;=4.4.2-&gt;Twisted&gt;=16.0-&gt;crochet) (57.4.0)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[notice] A new release of pip available: 22.2.2 -&gt; 22.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scrapy</span>
+<span class="kn">from</span> <span class="nn">scrapy.crawler</span> <span class="kn">import</span> <span class="n">CrawlerRunner</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">crochet</span> <span class="kn">import</span> <span class="n">setup</span><span class="p">,</span> <span class="n">wait_for</span>
+<span class="n">setup</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">QuotesToCsv</span><span class="p">(</span><span class="n">scrapy</span><span class="o">.</span><span class="n">Spider</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;MJKQuotesToCsv&quot;</span>
+    <span class="n">start_urls</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s1">&#39;https://tekno.tempo.co/read/1580340/peran-penting-iptekin-terhadap-kemajuan-sebuah-bangsa&#39;</span>
+    <span class="p">]</span>
+    <span class="n">custom_settings</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;ITEM_PIPELINES&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;__main__.ExtractFirstLine&#39;</span><span class="p">:</span> <span class="mi">1</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;FEEDS&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;news.csv&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;csv&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;overwrite&#39;</span><span class="p">:</span> <span class="kc">True</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;parse data from urls&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">quote</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s1">&#39;#isi &gt; p&#39;</span><span class="p">):</span>
+            <span class="k">yield</span> <span class="p">{</span><span class="s1">&#39;news&#39;</span><span class="p">:</span> <span class="n">quote</span><span class="o">.</span><span class="n">extract</span><span class="p">()}</span>
+
+
+<span class="k">class</span> <span class="nc">ExtractFirstLine</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">process_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span> <span class="n">spider</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;text processing&quot;&quot;&quot;</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">item</span><span class="p">)[</span><span class="s2">&quot;news&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+        <span class="n">first_line</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__remove_html_tags__</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;news&#39;</span><span class="p">:</span> <span class="n">first_line</span><span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__remove_html_tags__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;remove html tags from string&quot;&quot;&quot;</span>
+        <span class="n">html_tags</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;&lt;.*?&gt;&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">html_tags</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+<span class="nd">@wait_for</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">run_spider</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;run spider with MJKQuotesToCsv&quot;&quot;&quot;</span>
+    <span class="n">crawler</span> <span class="o">=</span> <span class="n">CrawlerRunner</span><span class="p">()</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">crawler</span><span class="o">.</span><span class="n">crawl</span><span class="p">(</span><span class="n">QuotesToCsv</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">d</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">run_spider</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="membaca-dokumen">
+<h2><strong>Membaca Dokumen</strong><a class="headerlink" href="#membaca-dokumen" title="Permalink to this headline">#</a></h2>
+<p>Setelah tahapan mengambil dokumen selesai, selanjutnya membaca dokumen yang sudah didapatkan. Untuk membaca dokumen terlebih dahulu kita convert file csv kedalam bentuk pdf dengan menggunakan library pdfkit. Untuk itu install library pdfkit terlebih dahulu seperti berikut.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install pdfkit
+
+<span class="o">!</span>wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.bionic_amd64.deb
+
+<span class="o">!</span>cp wkhtmltox_0.12.6-1.bionic_amd64.deb /usr/bin
+
+<span class="o">!</span>sudo apt install /usr/bin/wkhtmltox_0.12.6-1.bionic_amd64.deb
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pdfkit in c:\users\lenovo\appdata\local\programs\python\python39\lib\site-packages (1.0.0)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[notice] A new release of pip available: 22.2.2 -&gt; 22.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;wget&#39; is not recognized as an internal or external command,
+operable program or batch file.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;cp&#39; is not recognized as an internal or external command,
+operable program or batch file.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;sudo&#39; is not recognized as an internal or external command,
+operable program or batch file.
+</pre></div>
+</div>
+</div>
+</div>
+<section id="convert-file-csv-ke-pdf">
+<h3>Convert File CSV ke PDF<a class="headerlink" href="#convert-file-csv-ke-pdf" title="Permalink to this headline">#</a></h3>
+<p>Setelah librari pdfkit berhasil diinstal, maka langsung kita import untuk mengconvert file csv yang di dapat ke dalam format pdf menggunakan source code berikut.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pdfkit</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">path_wkhtmltopdf</span> <span class="o">=</span> <span class="s2">&quot;/content/wkhtmltox_0.12.6-1.bionic_amd64.deb&quot;</span>
+<span class="n">config</span> <span class="o">=</span> <span class="n">pdfkit</span><span class="o">.</span><span class="n">configuration</span><span class="p">(</span><span class="n">wkhtmltopdf</span><span class="o">=</span><span class="n">path_wkhtmltopdf</span><span class="p">)</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;news.csv&#39;</span><span class="p">,</span><span class="n">index_col</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">html_string</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">to_html</span><span class="p">()</span>
+<span class="n">pdfkit</span><span class="o">.</span><span class="n">from_string</span><span class="p">(</span><span class="n">html_string</span><span class="p">,</span> <span class="s2">&quot;Dokumen.pdf&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">~\AppData\Local\Programs\Python\Python39\lib\site-packages\pdfkit\configuration.py</span> in <span class="ni">__init__</span><span class="nt">(self, wkhtmltopdf, meta_tag_prefix, environ)</span>
+<span class="g g-Whitespace">     </span><span class="mi">34</span> 
+<span class="ne">---&gt; </span><span class="mi">35</span>             <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">wkhtmltopdf</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">36</span>                 <span class="k">pass</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;/content/wkhtmltox_0.12.6-1.bionic_amd64.deb&#39;
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">OSError</span><span class="g g-Whitespace">                                   </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_7336</span><span class="o">/</span><span class="mf">792963454.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">path_wkhtmltopdf</span> <span class="o">=</span> <span class="s2">&quot;/content/wkhtmltox_0.12.6-1.bionic_amd64.deb&quot;</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">config</span> <span class="o">=</span> <span class="n">pdfkit</span><span class="o">.</span><span class="n">configuration</span><span class="p">(</span><span class="n">wkhtmltopdf</span><span class="o">=</span><span class="n">path_wkhtmltopdf</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> 
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;news.csv&#39;</span><span class="p">,</span><span class="n">index_col</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nn">~\AppData\Local\Programs\Python\Python39\lib\site-packages\pdfkit\api.py</span> in <span class="ni">configuration</span><span class="nt">(**kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">84</span>     <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">85</span><span class="s2"> </span>
+<span class="ne">---&gt; </span><span class="mi">86</span><span class="s2">     return Configuration(**kwargs)</span>
+
+<span class="nn">~\AppData\Local\Programs\Python\Python39\lib\site-packages\pdfkit\configuration.py</span> in <span class="ni">__init__</span><span class="nt">(self, wkhtmltopdf, meta_tag_prefix, environ)</span>
+<span class="g g-Whitespace">     </span><span class="mi">36</span><span class="s2">                 pass</span>
+<span class="g g-Whitespace">     </span><span class="mi">37</span><span class="s2">         except (IOError, FileNotFoundError) as e:</span>
+<span class="ne">---&gt; </span><span class="mi">38</span><span class="s2">             raise IOError(&#39;No wkhtmltopdf executable found: &quot;</span><span class="si">%s</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&#39;</span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span><span class="s2">                           &#39;If this file exists please check that this process can &#39;</span>
+<span class="g g-Whitespace">     </span><span class="mi">40</span><span class="s2">                           &#39;read it or you can pass path to it manually in method call, &#39;</span>
+
+<span class="ne">OSError</span>: No wkhtmltopdf executable found: &quot;/content/wkhtmltox_0.12.6-1.bionic_amd64.deb&quot;
+<span class="s2">If this file exists please check that this process can read it or you can pass path to it manually in method call, check README. Otherwise please install wkhtmltopdf - https://github.com/JazzCore/python-pdfkit/wiki/Installing-wkhtmltopdf</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Setelah berhasil diconvert selanjutnya baca dokumen yang sudah diconvert tersebut dengan library PyPDF2 dan docx2txt, untuk itu kita install library tersebut terlebih dahulu dengan source code berikut.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install PyPDF2
+<span class="o">!</span>pip install docx2txt
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Collecting PyPDF2
+  Downloading PyPDF2-2.11.1-py3-none-any.whl (220 kB)
+     |████████████████████████████████| 220 kB 12.7 MB/s 
+?25hRequirement already satisfied: typing-extensions&gt;=3.10.0.0 in /usr/local/lib/python3.7/dist-packages (from PyPDF2) (4.1.1)
+Installing collected packages: PyPDF2
+Successfully installed PyPDF2-2.11.1
+Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Collecting docx2txt
+  Downloading docx2txt-0.8.tar.gz (2.8 kB)
+Building wheels for collected packages: docx2txt
+  Building wheel for docx2txt (setup.py) ... ?25l?25hdone
+  Created wheel for docx2txt: filename=docx2txt-0.8-py3-none-any.whl size=3980 sha256=b78537f33d7719847a55a09a772f0b943f52ff69cd9479ca4d2371cc396b89ed
+  Stored in directory: /root/.cache/pip/wheels/b7/20/b2/473e3aea9a0c0d3e7b2f7bd81d06d0794fec12752733d1f3a8
+Successfully built docx2txt
+Installing collected packages: docx2txt
+Successfully installed docx2txt-0.8
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="baca-dokumen">
+<h3>Baca Dokumen<a class="headerlink" href="#baca-dokumen" title="Permalink to this headline">#</a></h3>
+<p>Setelah berhasil diinstal selanjutnya kita import library tersebut untuk membaca dokumen yang sudah convert ke bentuk pdf dengan source code berikut.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">PyPDF2</span>
+<span class="kn">import</span> <span class="nn">docx2txt</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Setelah diimport kita panggil file dokumen tersebut.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Masukkan nama file: &#39;</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Anda telah memanggil dokument  </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Masukkan nama file: Dokumen.pdf
+Anda telah memanggil dokument  Dokumen.pdf
+</pre></div>
+</div>
+</div>
+</div>
+<p>Setelah itu baca file dokumen tersebut dengan source code berikut.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pdfFileObj</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span>
+<span class="n">pdfReader</span> <span class="o">=</span> <span class="n">PyPDF2</span><span class="o">.</span><span class="n">PdfFileReader</span><span class="p">(</span><span class="n">pdfFileObj</span><span class="p">)</span>
+<span class="n">pageObj</span> <span class="o">=</span> <span class="n">pdfReader</span><span class="o">.</span><span class="n">getPage</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">document</span> <span class="o">=</span> <span class="n">pageObj</span><span class="o">.</span><span class="n">extractText</span><span class="p">()</span>
+<span class="n">document</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;news\n0\nINFO TEKNO -Â Ilmu pengetahuan, teknologi, dan inovasi (Iptekin) adalah salah satu elemen kunci dalam mendorong\ndan mempercepat pembangunan ekonomi di suatu negara. Iptekin atau yang dalam bahasa global disebut sebagai\nscience, technology, and innovation (STI) juga menjadi key driver bagi berbagai negara-negara maju yang tergabung di\ndalam Organization for Economics Cooperation and Development (OECD) seperti Austria, Amerika Serikat, Swedia,\nItalia, Inggris, Belanda, Perancis, dan negara-negara Eropa lainnya.\n1\nBahkan negara-negara Newly Industrializing Economies (NIEs) yang sempat tertinggal secara ekonomi namun\nkemudian dapat mengejar dan mempercepat pembangunan seperti China, Korea Selatan, dan Taiwan, sangat\nbergantung pada apa yang disebut dengan knowledge-based economy (KBE). Terlebih, negara-negara tersebut,\nterutama Korea Selatan dan Taiwan, sangat minim akan bahan-bahan tambang atau sumber daya alam lainnya.\n2\nBerbagai studi telah menunjukkan bagaimana negara-negara maju dan juga NIEs memberikan prioritas kepada\npengembangan iptekin nasional guna mendorong aktivitas perekonomian di suatu negara. Bahkan di antaranya juga\nsudah mulai menekankan aspek sosial, kelembagaan, dan budaya yang mempengaruhi pengembangan iptekin\nnasional.\n3\nHal ini kemudian melahirkan berbagai konsep pengembangan iptekin secara komprehensif baik dari pendekatan\ncakupan tujuan secara nasional yang kemudian disebut sistem inovasi nasional (SIN), dari pendekatan kedekatan\ngeografi (geography proximity) yang kemudian disebut sebagai sistem inovasi wilayah/daerah (SIDA), dari pendekatan\nsektor tertentu yang kemudian disebut sebagai sistem inovasi sektoral (SIS), dan kemudian juga didekati dengan\naspek teknologi atau yang disebut sebagai technological innovation system (TIS).\n4\nIlmu pengetahuan, teknologi, dan inovasi (Iptekin) adalah salah satu elemen kunci dalam mendorong dan\nmempercepat pembangunan ekonomi di suatu negara.\n5\nSaat ini, diskursus terkait ekosistem inovasi juga meningkat seiring banyak cendekiawan yang menggagas dan\nmendiskusikan hal tersebut baik di berbagai negara dan sektor.\n6\nNegara-negara berkembang juga tengah berupaya mengejar ketertinggalan ekonomi mereka melalui pendekatan\niptekin (technology catch-up) sejak tahun 1990-an. Sejumlah upaya yang dilakukan termasuk di antaranya\nmengembangkan berbagai konsep sistem inovasi sebagai bagian dari pengejaran dan akselerasi pembangunan\nekonomi dari negara-negara maju atau NIEs tersebut dengan memperhatikan berbagai aspek mulai ekonomi, sumber\ndaya alam, kebijakan pemerintah, organisasi/kelembagaan, sosial, dan aspek eksternal/lingkungan yang begitu luas\ndan kompleks.\n7\nTidak sedikit pula negara- negara sedang berkembang yang dalam implementasinya menemui banyak kendala\nsehingga mengakibatkan akselerasi pengembangan iptekin di negaranya menjadi terhambat. Akibatnya, KBE seringkali\nmenjadi tataran konsep di dalam dokumen-dokumen pemerintah atau hanya sebagai wacana yang disuarakan dari\ntahun ke tahun.\n8\nMeniru secara langsung, mereplikasi, mengadaptasi, mengabsorbsi iptekin dan sistem inovasi dari negara-negara maju\natau negara-negara yang sudah berhasil menerapkan hal tersebut menjadi salah satu praktik terbaik yang dilakukan\noleh negara-negara sedang berkembang seperti halnya Indonesia.\n9\nNamun demikian, seringkali implementasi kebijakan tersebut tidaklah berjalan sesuai dengan rencana atau tidak\nmencapai tujuan, karena seringkali apa yang dilihat dan dipraktikkan oleh negara-negara sedang berkembang memiliki\nkonteks dan konten yang berbeda.\n10\nHal ini tentu memerlukan intervensi khusus dimana pemerintah menjadi salah satu aktor penting dalam\nmenumbuhkembangkan iptekin nasional baik dengan belajar dari negara-negara maju atau yang sudah berhasil,\nmaupun dengan cara mengembangkan kemampuan berdasar kekuatan dan sumber daya lokal yang dimiliki oleh\nnegara-negara tersebut.(*)&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="memecah-dokumen">
+<h2><strong>Memecah Dokumen</strong><a class="headerlink" href="#memecah-dokumen" title="Permalink to this headline">#</a></h2>
+<p>Setelah berhasil membaca dokumen, selanjutnya pecah dokumen sehingga terdiri dari kalimat dan kata-kata dengan menggunakan library nltk. Maka dari itu terlebih dahulu import librarynya seperti berikut.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nltk.tokenize.punkt</span> <span class="kn">import</span> <span class="n">PunktSentenceTokenizer</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="memecah-kalimat">
+<h3>Memecah Kalimat<a class="headerlink" href="#memecah-kalimat" title="Permalink to this headline">#</a></h3>
+<p>Setelah library yang dibutuhkan sudah di import selanjutnya pecah dokumen dalam beberapa kalimat dengan menggunakan function berikut.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tokenize</span><span class="p">(</span><span class="n">document</span><span class="p">):</span>
+    <span class="c1"># Kita memecahnya menggunakan  PunktSentenceTokenizer</span>
+    <span class="c1"># </span>
+    <span class="n">doc_tokenizer</span> <span class="o">=</span> <span class="n">PunktSentenceTokenizer</span><span class="p">()</span>
+    
+    <span class="c1"># metode tokenize() memanggil dokument kita</span>
+    <span class="c1"># sebagai input dan menghasilkan daftar kalimat dalam dokumen</span>
+    
+    <span class="c1"># sentences_list adalah daftar masing masing kalimat dari dokumen yang ada.</span>
+    <span class="n">sentences_list</span> <span class="o">=</span> <span class="n">doc_tokenizer</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">document</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">sentences_list</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentences_list</span> <span class="o">=</span> <span class="n">tokenize</span><span class="p">(</span><span class="n">document</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Banyaknya kalimat = &quot;</span><span class="p">,</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sentences_list</span><span class="p">)),</span><span class="s1">&#39;kalimat&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Banyaknya kalimat =  17 kalimat
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">sentences_list</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;----------------------------------------------------------------------------------------------------------------------&#39;</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Kalimat&#39;</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;----------------------------------------------------------------------------------------------------------------------&#39;</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+  <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;----------------------------------------------------------------------------------------------------------------------&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>----------------------------------------------------------------------------------------------------------------------
+Kalimat 1
+----------------------------------------------------------------------------------------------------------------------
+news
+0
+INFO TEKNO -Â Ilmu pengetahuan, teknologi, dan inovasi (Iptekin) adalah salah satu elemen kunci dalam mendorong
+dan mempercepat pembangunan ekonomi di suatu negara.
+----------------------------------------------------------------------------------------------------------------------
+Kalimat 2
+----------------------------------------------------------------------------------------------------------------------
+Iptekin atau yang dalam bahasa global disebut sebagai
+science, technology, and innovation (STI) juga menjadi key driver bagi berbagai negara-negara maju yang tergabung di
+dalam Organization for Economics Cooperation and Development (OECD) seperti Austria, Amerika Serikat, Swedia,
+Italia, Inggris, Belanda, Perancis, dan negara-negara Eropa lainnya.
+----------------------------------------------------------------------------------------------------------------------
+Kalimat 3
+----------------------------------------------------------------------------------------------------------------------
+1
+Bahkan negara-negara Newly Industrializing Economies (NIEs) yang sempat tertinggal secara ekonomi namun
+kemudian dapat mengejar dan mempercepat pembangunan seperti China, Korea Selatan, dan Taiwan, sangat
+bergantung pada apa yang disebut dengan knowledge-based economy (KBE).
+----------------------------------------------------------------------------------------------------------------------
+Kalimat 4
+----------------------------------------------------------------------------------------------------------------------
+Terlebih, negara-negara tersebut,
+terutama Korea Selatan dan Taiwan, sangat minim akan bahan-bahan tambang atau sumber daya alam lainnya.
+----------------------------------------------------------------------------------------------------------------------
+Kalimat 5
+----------------------------------------------------------------------------------------------------------------------
+2
+Berbagai studi telah menunjukkan bagaimana negara-negara maju dan juga NIEs memberikan prioritas kepada
+pengembangan iptekin nasional guna mendorong aktivitas perekonomian di suatu negara.
+----------------------------------------------------------------------------------------------------------------------
+Kalimat 6
+----------------------------------------------------------------------------------------------------------------------
+Bahkan di antaranya juga
+sudah mulai menekankan aspek sosial, kelembagaan, dan budaya yang mempengaruhi pengembangan iptekin
+nasional.
+----------------------------------------------------------------------------------------------------------------------
+Kalimat 7
+----------------------------------------------------------------------------------------------------------------------
+3
+Hal ini kemudian melahirkan berbagai konsep pengembangan iptekin secara komprehensif baik dari pendekatan
+cakupan tujuan secara nasional yang kemudian disebut sistem inovasi nasional (SIN), dari pendekatan kedekatan
+geografi (geography proximity) yang kemudian disebut sebagai sistem inovasi wilayah/daerah (SIDA), dari pendekatan
+sektor tertentu yang kemudian disebut sebagai sistem inovasi sektoral (SIS), dan kemudian juga didekati dengan
+aspek teknologi atau yang disebut sebagai technological innovation system (TIS).
+----------------------------------------------------------------------------------------------------------------------
+Kalimat 8
+----------------------------------------------------------------------------------------------------------------------
+4
+Ilmu pengetahuan, teknologi, dan inovasi (Iptekin) adalah salah satu elemen kunci dalam mendorong dan
+mempercepat pembangunan ekonomi di suatu negara.
+----------------------------------------------------------------------------------------------------------------------
+Kalimat 9
+----------------------------------------------------------------------------------------------------------------------
+5
+Saat ini, diskursus terkait ekosistem inovasi juga meningkat seiring banyak cendekiawan yang menggagas dan
+mendiskusikan hal tersebut baik di berbagai negara dan sektor.
+----------------------------------------------------------------------------------------------------------------------
+Kalimat 10
+----------------------------------------------------------------------------------------------------------------------
+6
+Negara-negara berkembang juga tengah berupaya mengejar ketertinggalan ekonomi mereka melalui pendekatan
+iptekin (technology catch-up) sejak tahun 1990-an.
+----------------------------------------------------------------------------------------------------------------------
+Kalimat 11
+----------------------------------------------------------------------------------------------------------------------
+Sejumlah upaya yang dilakukan termasuk di antaranya
+mengembangkan berbagai konsep sistem inovasi sebagai bagian dari pengejaran dan akselerasi pembangunan
+ekonomi dari negara-negara maju atau NIEs tersebut dengan memperhatikan berbagai aspek mulai ekonomi, sumber
+daya alam, kebijakan pemerintah, organisasi/kelembagaan, sosial, dan aspek eksternal/lingkungan yang begitu luas
+dan kompleks.
+----------------------------------------------------------------------------------------------------------------------
+Kalimat 12
+----------------------------------------------------------------------------------------------------------------------
+7
+Tidak sedikit pula negara- negara sedang berkembang yang dalam implementasinya menemui banyak kendala
+sehingga mengakibatkan akselerasi pengembangan iptekin di negaranya menjadi terhambat.
+----------------------------------------------------------------------------------------------------------------------
+Kalimat 13
+----------------------------------------------------------------------------------------------------------------------
+Akibatnya, KBE seringkali
+menjadi tataran konsep di dalam dokumen-dokumen pemerintah atau hanya sebagai wacana yang disuarakan dari
+tahun ke tahun.
+----------------------------------------------------------------------------------------------------------------------
+Kalimat 14
+----------------------------------------------------------------------------------------------------------------------
+8
+Meniru secara langsung, mereplikasi, mengadaptasi, mengabsorbsi iptekin dan sistem inovasi dari negara-negara maju
+atau negara-negara yang sudah berhasil menerapkan hal tersebut menjadi salah satu praktik terbaik yang dilakukan
+oleh negara-negara sedang berkembang seperti halnya Indonesia.
+----------------------------------------------------------------------------------------------------------------------
+Kalimat 15
+----------------------------------------------------------------------------------------------------------------------
+9
+Namun demikian, seringkali implementasi kebijakan tersebut tidaklah berjalan sesuai dengan rencana atau tidak
+mencapai tujuan, karena seringkali apa yang dilihat dan dipraktikkan oleh negara-negara sedang berkembang memiliki
+konteks dan konten yang berbeda.
+----------------------------------------------------------------------------------------------------------------------
+Kalimat 16
+----------------------------------------------------------------------------------------------------------------------
+10
+Hal ini tentu memerlukan intervensi khusus dimana pemerintah menjadi salah satu aktor penting dalam
+menumbuhkembangkan iptekin nasional baik dengan belajar dari negara-negara maju atau yang sudah berhasil,
+maupun dengan cara mengembangkan kemampuan berdasar kekuatan dan sumber daya lokal yang dimiliki oleh
+negara-negara tersebut.
+----------------------------------------------------------------------------------------------------------------------
+Kalimat 17
+----------------------------------------------------------------------------------------------------------------------
+(*)
+----------------------------------------------------------------------------------------------------------------------
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="memecah-kata">
+<h3>Memecah Kata<a class="headerlink" href="#memecah-kata" title="Permalink to this headline">#</a></h3>
+<p>Setelah dokumen terpecah menjadi beberapa kalimat, selanjutnya kita pecah lagi menjadi kata dengan library sklearn seperti berikut.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfTransformer</span><span class="p">,</span> <span class="n">CountVectorizer</span>
+<span class="n">cv</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">()</span>
+<span class="n">cv_matrix</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">sentences_list</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Banyaknya kosa kata = &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">((</span><span class="n">cv</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">())),</span><span class="s1">&#39;kosa kata&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Banyaknya kosa kata =  242 kosa kata
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;kosa kata = &quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">cv</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>kosa kata =  [&#39;10&#39; &#39;1990&#39; &#39;adalah&#39; &#39;akan&#39; &#39;akibatnya&#39; &#39;akselerasi&#39; &#39;aktivitas&#39; &#39;aktor&#39;
+ &#39;alam&#39; &#39;amerika&#39; &#39;an&#39; &#39;and&#39; &#39;antaranya&#39; &#39;apa&#39; &#39;aspek&#39; &#39;atau&#39; &#39;austria&#39;
+ &#39;bagaimana&#39; &#39;bagi&#39; &#39;bagian&#39; &#39;bahan&#39; &#39;bahasa&#39; &#39;bahkan&#39; &#39;baik&#39; &#39;banyak&#39;
+ &#39;based&#39; &#39;begitu&#39; &#39;belajar&#39; &#39;belanda&#39; &#39;berbagai&#39; &#39;berbeda&#39; &#39;berdasar&#39;
+ &#39;bergantung&#39; &#39;berhasil&#39; &#39;berjalan&#39; &#39;berkembang&#39; &#39;berupaya&#39; &#39;budaya&#39;
+ &#39;cakupan&#39; &#39;cara&#39; &#39;catch&#39; &#39;cendekiawan&#39; &#39;china&#39; &#39;cooperation&#39; &#39;daerah&#39;
+ &#39;dalam&#39; &#39;dan&#39; &#39;dapat&#39; &#39;dari&#39; &#39;daya&#39; &#39;demikian&#39; &#39;dengan&#39; &#39;development&#39;
+ &#39;di&#39; &#39;didekati&#39; &#39;dilakukan&#39; &#39;dilihat&#39; &#39;dimana&#39; &#39;dimiliki&#39; &#39;dipraktikkan&#39;
+ &#39;disebut&#39; &#39;diskursus&#39; &#39;disuarakan&#39; &#39;dokumen&#39; &#39;driver&#39; &#39;economics&#39;
+ &#39;economies&#39; &#39;economy&#39; &#39;ekonomi&#39; &#39;ekosistem&#39; &#39;eksternal&#39; &#39;elemen&#39; &#39;eropa&#39;
+ &#39;for&#39; &#39;geografi&#39; &#39;geography&#39; &#39;global&#39; &#39;guna&#39; &#39;hal&#39; &#39;halnya&#39; &#39;hanya&#39;
+ &#39;ilmu&#39; &#39;implementasi&#39; &#39;implementasinya&#39; &#39;indonesia&#39; &#39;industrializing&#39;
+ &#39;info&#39; &#39;inggris&#39; &#39;ini&#39; &#39;innovation&#39; &#39;inovasi&#39; &#39;intervensi&#39; &#39;iptekin&#39;
+ &#39;italia&#39; &#39;juga&#39; &#39;karena&#39; &#39;kbe&#39; &#39;ke&#39; &#39;kebijakan&#39; &#39;kedekatan&#39; &#39;kekuatan&#39;
+ &#39;kelembagaan&#39; &#39;kemampuan&#39; &#39;kemudian&#39; &#39;kendala&#39; &#39;kepada&#39; &#39;ketertinggalan&#39;
+ &#39;key&#39; &#39;khusus&#39; &#39;knowledge&#39; &#39;kompleks&#39; &#39;komprehensif&#39; &#39;konsep&#39; &#39;konteks&#39;
+ &#39;konten&#39; &#39;korea&#39; &#39;kunci&#39; &#39;lainnya&#39; &#39;langsung&#39; &#39;lingkungan&#39; &#39;lokal&#39; &#39;luas&#39;
+ &#39;maju&#39; &#39;maupun&#39; &#39;melahirkan&#39; &#39;melalui&#39; &#39;memberikan&#39; &#39;memerlukan&#39;
+ &#39;memiliki&#39; &#39;mempengaruhi&#39; &#39;mempercepat&#39; &#39;memperhatikan&#39; &#39;mencapai&#39;
+ &#39;mendiskusikan&#39; &#39;mendorong&#39; &#39;menekankan&#39; &#39;menemui&#39; &#39;menerapkan&#39;
+ &#39;mengabsorbsi&#39; &#39;mengadaptasi&#39; &#39;mengakibatkan&#39; &#39;mengejar&#39; &#39;mengembangkan&#39;
+ &#39;menggagas&#39; &#39;meningkat&#39; &#39;meniru&#39; &#39;menjadi&#39; &#39;menumbuhkembangkan&#39;
+ &#39;menunjukkan&#39; &#39;mereka&#39; &#39;mereplikasi&#39; &#39;minim&#39; &#39;mulai&#39; &#39;namun&#39; &#39;nasional&#39;
+ &#39;negara&#39; &#39;negaranya&#39; &#39;newly&#39; &#39;news&#39; &#39;nies&#39; &#39;oecd&#39; &#39;oleh&#39; &#39;organisasi&#39;
+ &#39;organization&#39; &#39;pada&#39; &#39;pembangunan&#39; &#39;pemerintah&#39; &#39;pendekatan&#39;
+ &#39;pengejaran&#39; &#39;pengembangan&#39; &#39;pengetahuan&#39; &#39;penting&#39; &#39;perancis&#39;
+ &#39;perekonomian&#39; &#39;praktik&#39; &#39;prioritas&#39; &#39;proximity&#39; &#39;pula&#39; &#39;rencana&#39; &#39;saat&#39;
+ &#39;salah&#39; &#39;sangat&#39; &#39;satu&#39; &#39;science&#39; &#39;sebagai&#39; &#39;secara&#39; &#39;sedang&#39; &#39;sedikit&#39;
+ &#39;sehingga&#39; &#39;seiring&#39; &#39;sejak&#39; &#39;sejumlah&#39; &#39;sektor&#39; &#39;sektoral&#39; &#39;selatan&#39;
+ &#39;sempat&#39; &#39;seperti&#39; &#39;serikat&#39; &#39;seringkali&#39; &#39;sesuai&#39; &#39;sida&#39; &#39;sin&#39; &#39;sis&#39;
+ &#39;sistem&#39; &#39;sosial&#39; &#39;sti&#39; &#39;studi&#39; &#39;suatu&#39; &#39;sudah&#39; &#39;sumber&#39; &#39;swedia&#39;
+ &#39;system&#39; &#39;tahun&#39; &#39;taiwan&#39; &#39;tambang&#39; &#39;tataran&#39; &#39;technological&#39;
+ &#39;technology&#39; &#39;tekno&#39; &#39;teknologi&#39; &#39;telah&#39; &#39;tengah&#39; &#39;tentu&#39; &#39;terbaik&#39;
+ &#39;tergabung&#39; &#39;terhambat&#39; &#39;terkait&#39; &#39;terlebih&#39; &#39;termasuk&#39; &#39;tersebut&#39;
+ &#39;tertentu&#39; &#39;tertinggal&#39; &#39;terutama&#39; &#39;tidak&#39; &#39;tidaklah&#39; &#39;tis&#39; &#39;tujuan&#39; &#39;up&#39;
+ &#39;upaya&#39; &#39;wacana&#39; &#39;wilayah&#39; &#39;yang&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="membuat-matrik-tf-idf">
+<h2><strong>Membuat Matrik TF-IDF</strong><a class="headerlink" href="#membuat-matrik-tf-idf" title="Permalink to this headline">#</a></h2>
+<p>Setelah memecah dokumen menjadi beberapa kalimat dan kata, selanjutnya buat sebuah matrik VSM untuk membuat TF-IDF seperti berikut.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cv_matrix</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  (0, 158)	1
+  (0, 86)	1
+  (0, 218)	1
+  (0, 81)	1
+  (0, 170)	1
+  (0, 219)	1
+  (0, 46)	2
+  (0, 90)	1
+  (0, 92)	1
+  (0, 2)	1
+  (0, 180)	1
+  (0, 182)	1
+  (0, 71)	1
+  (0, 116)	1
+  (0, 45)	1
+  (0, 134)	1
+  (0, 130)	1
+  (0, 165)	1
+  (0, 68)	1
+  (0, 53)	1
+  (0, 207)	1
+  (0, 155)	1
+  (1, 46)	1
+  (1, 92)	1
+  (1, 45)	2
+  :	:
+  (15, 78)	1
+  (15, 88)	1
+  (15, 23)	1
+  (15, 48)	1
+  (15, 142)	1
+  (15, 166)	1
+  (15, 33)	1
+  (15, 161)	1
+  (15, 0)	1
+  (15, 222)	1
+  (15, 127)	1
+  (15, 91)	1
+  (15, 108)	1
+  (15, 57)	1
+  (15, 7)	1
+  (15, 171)	1
+  (15, 147)	1
+  (15, 27)	1
+  (15, 123)	1
+  (15, 39)	1
+  (15, 102)	1
+  (15, 31)	1
+  (15, 100)	1
+  (15, 120)	1
+  (15, 58)	1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">normal_matrix</span> <span class="o">=</span> <span class="n">TfidfTransformer</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">cv_matrix</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">normal_matrix</span><span class="o">.</span><span class="n">toarray</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.         0.         0.24039265 ... 0.         0.         0.        ]
+ [0.         0.         0.         ... 0.         0.         0.14208618]
+ [0.         0.         0.         ... 0.         0.         0.17222078]
+ ...
+ [0.         0.         0.         ... 0.         0.         0.1735011 ]
+ [0.17545081 0.         0.         ... 0.         0.         0.15425253]
+ [0.         0.         0.         ... 0.         0.         0.        ]]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="membuat-graph">
+<h2><strong>Membuat Graph</strong><a class="headerlink" href="#membuat-graph" title="Permalink to this headline">#</a></h2>
+<p>Setelah matrik TF-IDF terbentuk, selanjutnya buat graph berdasarkan dari matrik tersebut dengan library networkx seperti berikut.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">normal_matrix</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">toarray</span><span class="p">)</span>
+<span class="n">res_graph</span> <span class="o">=</span> <span class="n">normal_matrix</span> <span class="o">*</span> <span class="n">normal_matrix</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;bound method _cs_matrix.toarray of &lt;242x17 sparse matrix of type &#39;&lt;class &#39;numpy.float64&#39;&gt;&#39;
+	with 441 stored elements in Compressed Sparse Column format&gt;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nx_graph</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">from_scipy_sparse_matrix</span><span class="p">(</span><span class="n">res_graph</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nx</span><span class="o">.</span><span class="n">draw_circular</span><span class="p">(</span><span class="n">nx_graph</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/notebooks2_33_0.png" src="_images/notebooks2_33_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Banyaknya sisi </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nx_graph</span><span class="o">.</span><span class="n">number_of_edges</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Banyaknya sisi 136
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">normal_matrix</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(17, 242)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="menghitung-pagerank">
+<h2><strong>Menghitung PageRank</strong><a class="headerlink" href="#menghitung-pagerank" title="Permalink to this headline">#</a></h2>
+<p>Setelah terbentuk graph, selanjutnya hitung nilai pagerank dari masing-masing kalimat dengan source code di bawah ini. Pengertian PageRank sendiri ialah algoritma otoritas tautan yang dibuat oleh Google. Ini berguna untuk membantu mesin telusur membandingkan halaman yang memenuhi syarat untuk kueri tertentu berdasarkan seberapa sering mereka direferensikan berupa tautan di halaman situs lain.<br></p>
+<center><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/PageRanks-Example.svg/330px-PageRanks-Example.svg.png'></center><center>Gambar PageRank</center><br>PageRank merupakan istilah untuk mengambarkan skor situs berdasarkan kalkulasi dari kuantitas dan kualitas tautan masuk. Ini dilakukan algoritma Google sebagai salah satu faktor penentu peringkat sebuah website.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ranks</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">pagerank</span><span class="p">(</span><span class="n">nx_graph</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">rangking</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">ranks</span><span class="p">:</span>
+  <span class="n">m</span> <span class="o">=</span> <span class="n">ranks</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="s1">&#39;Kalimat ke&#39;</span><span class="p">,</span><span class="n">n</span>
+  <span class="n">rangking</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Kalimat&#39;</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="s1">&#39;:&#39;</span><span class="p">,</span><span class="n">ranks</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+  <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kalimat 1 : 0.06908468250500893
+Kalimat 2 : 0.06254658327467967
+Kalimat 3 : 0.06313036494382007
+Kalimat 4 : 0.05107416704185665
+Kalimat 5 : 0.06189651471735026
+Kalimat 6 : 0.05495324698876229
+Kalimat 7 : 0.060570700433527774
+Kalimat 8 : 0.07258194210455156
+Kalimat 9 : 0.057371902749834544
+Kalimat 10 : 0.05167534273727485
+Kalimat 11 : 0.07439877852826626
+Kalimat 12 : 0.05718939803656092
+Kalimat 13 : 0.049668502087235264
+Kalimat 14 : 0.07692670544992392
+Kalimat 15 : 0.057259034660847447
+Kalimat 16 : 0.07038420804390487
+Kalimat 17 : 0.009287925696594672
+</pre></div>
+</div>
+</div>
+</div>
+<p>Setelah nilai pagerank didapatkan, selanjutnya kita rangking nilai pagerank tersebut dari nilai yang paling tinggi seperti berikut.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rangking</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">rangking</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(0.07692670544992392, &#39;Kalimat ke&#39;, 14),
+ (0.07439877852826626, &#39;Kalimat ke&#39;, 11),
+ (0.07258194210455156, &#39;Kalimat ke&#39;, 8),
+ (0.07038420804390487, &#39;Kalimat ke&#39;, 16),
+ (0.06908468250500893, &#39;Kalimat ke&#39;, 1),
+ (0.06313036494382007, &#39;Kalimat ke&#39;, 3),
+ (0.06254658327467967, &#39;Kalimat ke&#39;, 2),
+ (0.06189651471735026, &#39;Kalimat ke&#39;, 5),
+ (0.060570700433527774, &#39;Kalimat ke&#39;, 7),
+ (0.057371902749834544, &#39;Kalimat ke&#39;, 9),
+ (0.057259034660847447, &#39;Kalimat ke&#39;, 15),
+ (0.05718939803656092, &#39;Kalimat ke&#39;, 12),
+ (0.05495324698876229, &#39;Kalimat ke&#39;, 6),
+ (0.05167534273727485, &#39;Kalimat ke&#39;, 10),
+ (0.05107416704185665, &#39;Kalimat ke&#39;, 4),
+ (0.049668502087235264, &#39;Kalimat ke&#39;, 13),
+ (0.009287925696594672, &#39;Kalimat ke&#39;, 17)]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="memilih-kalimat">
+<h2><strong>Memilih Kalimat</strong><a class="headerlink" href="#memilih-kalimat" title="Permalink to this headline">#</a></h2>
+<p>Setelah didapatkan kalimat yang memiliki nilai pagerank tertinggi, selanjutnya pilih kalimat yang memiliki nilai pagerank tertinggi, dari data dapat dilihat bahwa kalimat ke-14,11,8,16 dan seterusnya memiliki nilai pagerank dari yang paling tinggi hingga rendah.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">sentences_list</span><span class="p">[</span><span class="mi">13</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sentences_list</span><span class="p">[</span><span class="mi">10</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sentences_list</span><span class="p">[</span><span class="mi">7</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sentences_list</span><span class="p">[</span><span class="mi">15</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
+Meniru secara langsung, mereplikasi, mengadaptasi, mengabsorbsi iptekin dan sistem inovasi dari negara-negara maju
+atau negara-negara yang sudah berhasil menerapkan hal tersebut menjadi salah satu praktik terbaik yang dilakukan
+oleh negara-negara sedang berkembang seperti halnya Indonesia.
+Sejumlah upaya yang dilakukan termasuk di antaranya
+mengembangkan berbagai konsep sistem inovasi sebagai bagian dari pengejaran dan akselerasi pembangunan
+ekonomi dari negara-negara maju atau NIEs tersebut dengan memperhatikan berbagai aspek mulai ekonomi, sumber
+daya alam, kebijakan pemerintah, organisasi/kelembagaan, sosial, dan aspek eksternal/lingkungan yang begitu luas
+dan kompleks.
+4
+Ilmu pengetahuan, teknologi, dan inovasi (Iptekin) adalah salah satu elemen kunci dalam mendorong dan
+mempercepat pembangunan ekonomi di suatu negara.
+10
+Hal ini tentu memerlukan intervensi khusus dimana pemerintah menjadi salah satu aktor penting dalam
+menumbuhkembangkan iptekin nasional baik dengan belajar dari negara-negara maju atau yang sudah berhasil,
+maupun dengan cara mengembangkan kemampuan berdasar kekuatan dan sumber daya lokal yang dimiliki oleh
+negara-negara tersebut.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="kesimpulan">
+<h2><strong>Kesimpulan</strong><a class="headerlink" href="#kesimpulan" title="Permalink to this headline">#</a></h2>
+<p>Berdasar dari tahapan-tahapan yang dilakukan dapat disimpulkan bahwa ringkasan atau simpulan dokumen yang didapat ialah “Meniru secara langsung, mereplikasi, mengadaptasi, mengabsorbsi iptekin dan sistem inovasi dari negara-negara maju atau negara-negara yang sudah berhasil menerapkan hal tersebut menjadi salah satu praktik terbaik yang dilakukan oleh negara-negara sedang berkembang seperti halnya Indonesia. Sejumlah upaya yang dilakukan termasuk di antaranya
+mengembangkan berbagai konsep sistem inovasi sebagai bagian dari pengejaran dan akselerasi pembangunan ekonomi dari negara-negara maju atau NIEs tersebut dengan memperhatikan berbagai aspek mulai ekonomi, sumber daya alam, kebijakan pemerintah, organisasi/kelembagaan, sosial, dan aspek eksternal/lingkungan yang begitu luas
+dan kompleks.Ilmu pengetahuan, teknologi, dan inovasi (Iptekin) adalah salah satu elemen kunci dalam mendorong dan mempercepat pembangunan ekonomi di suatu negara.Hal ini tentu memerlukan intervensi khusus dimana pemerintah menjadi salah satu aktor penting dalam menumbuhkembangkan iptekin nasional baik dengan belajar dari negara-negara maju atau yang sudah berhasil, maupun dengan cara mengembangkan kemampuan berdasar kekuatan dan sumber daya lokal yang dimiliki oleh negara-negara tersebut.” Ringkasan tersebut diperoleh dari 4 data kalimat yang memiliki nilai pagerank tertinggi.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="notebooks1.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Klasifikasi &amp; Clustering</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="notebooks3.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">UTS WEB Mining</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Fahrur Rizal<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
